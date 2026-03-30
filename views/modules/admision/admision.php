@@ -20,7 +20,8 @@ require_once('../../../class/SqlDinamico.class.php');      $objSqlDinamico    = 
 $parametros                             = $objUtil->getFormulario($_POST);
 $cargarNacionalidad                     = $objSqlDinamico->generarSelect($objCon,'paciente.nacionalidadavis' , $parametrosSelect, $order);
 
-$cargarReligion                         = $objSqlDinamico->generarSelect($objCon,'paciente.religion' , $parametrosSelect, " order by rlg_descripcion asc");
+// $cargarReligion                         = $objSqlDinamico->generarSelect($objCon,'paciente.religion' , $parametrosSelect, " order by rlg_descripcion asc");
+
 $cargarPrevision                        = $objSqlDinamico->generarSelect($objCon,'paciente.prevision' , $parametrosSelect, " order by prevision asc");
 $cargarConvenio                         = $objSqlDinamico->generarSelect($objCon,'recauda.institucion' , $parametrosSelect, " order by instNombre asc");
 $cargarMedios                           = $objSqlDinamico->generarSelect($objCon,'dau.medio_llegada' , $parametrosSelect, " order by med_descripcion asc");
